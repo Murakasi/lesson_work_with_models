@@ -9,6 +9,6 @@ def index(request: HttpRequest):
     elif request.method == "GET":
         pass
     context = {
-        
+        "name": "Ruslan",
     }
-    return HttpResponse("Hello")
+    return render(request, "lesson1/index.html", context)
