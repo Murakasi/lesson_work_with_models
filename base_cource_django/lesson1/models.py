@@ -22,7 +22,7 @@ class Report(models.Model):
     text = models.TextField()
     rating = models.FloatField()
     positiv_or_negativ = models.CharField(max_length=10, choices=POSITIV_NEGATIV)
-    telefon_number = models.CharField(max_length=13, help_text="ex: +380........")
+    telefon_number = models.CharField(max_length=13)
     
     
     def __str__(self):
