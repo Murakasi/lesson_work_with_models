@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'lesson1/css/style.css' %}">
+
+{% block content %}
+<p>
+  Hello {{ name }}
+</p>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td colspan=3>Отзив</td>
+    </tr>
+    {% for f in form %}
+    <tr>
+      {% if f.errors %}
+        <td>{{ f.errors }}</td>
+      {% endif %}
+      <td>{{ f.label_tag }}</td>
+      <td>{{ f }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <input type="submit" value="SUBMIT">
+</form>
+{% endblock content %}

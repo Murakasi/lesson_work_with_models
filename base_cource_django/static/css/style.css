@@ -1,0 +1,8 @@
+body{
+  background-color: cadetblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  text-align: center;
+  text-shadow: 3px 3px 3px rgba(245, 33, 178, 0.5);
+}
